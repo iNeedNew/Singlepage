@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/reset.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/style.css')}}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div class="layout">
+        <div class="input-wrapper">
+            <div class="input-box">
+                <form method="post" action="">
+                    {{ form.hidden_tag() }}
+                    <div class="form-inner">
+                        {{ form.name(placeholder="Имя") }}
+                        {{ form.email(placeholder="Почта") }}
+                        {{ form.text(placeholder="Сообщение..", rows="3") }}
+                        {{ form.submit(value="Отправить") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="content-box">
+                <div class="content-inner">
+                    {% for message in messages %}
+                    <div class="message">
+                        <div class="title">
+                            <div class="name outline">{{ message.name }}</div>
+                            <div class="email outline">{{ message.email }}</div>
+                        </div>
+                        <div class="text">{{ message.text }}</div>
+                    </div> 
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
