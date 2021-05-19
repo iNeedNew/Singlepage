@@ -15,7 +15,7 @@
                     <div class="form-inner">
                         {{ form.name(placeholder="Имя") }}
                         {{ form.email(placeholder="Почта") }}
-                        {{ form.text(placeholder="Сообщение..", rows="3") }}
+                        {{ form.body(placeholder="Сообщение..", rows="3") }}
                         {{ form.submit(value="Отправить") }}
                     </div>
                 </form>
@@ -30,7 +30,7 @@
                             <div class="name outline">{{ message.name }}</div>
                             <div class="email outline">{{ message.email }}</div>
                         </div>
-                        <div class="text">{{ message.text }}</div>
+                        <div class="body">{{ message.body }}</div>
                     </div> 
                     {% endfor %}
                 </div>

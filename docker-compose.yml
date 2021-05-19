@@ -1,0 +1,28 @@
+version: '3'
+services:
+    database:
+        image: mysql:8.0.25
+        container_name: mysql
+        hostname: mysql-server
+        ports:
+            - 3306:3306
+        volumes:
+            - datavolume:/var/lib/mysql
+            - migrationvolume:/usr/src/app/migrations/*
+        environment:
+            MYSQL_ROOT_PASSWORD: P@ssw0rd
+            MYSQL_DATABASE: singlepage_storage
+        restart: always
+    backend:
+        build: backend
+        container_name: flask
+        ports:
+            - 5000:5000
+        volumes:
+            - $PWD/config.yaml:/usr/src/app/config/config.yaml
+        restart: always
+        depends_on:
+            -   database
+volumes:
+    datavolume:
+    migrationvolume:
