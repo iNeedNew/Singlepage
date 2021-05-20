@@ -4,3 +4,4 @@ flask-wtf~=0.14.3
 flask-sqlalchemy~=2.5.1
 pymysql~=1.0.2
 flask-migrate~=3.0.0
+cryptography~=3.4.7
