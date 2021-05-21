@@ -5,5 +5,5 @@ DATABASE:
   USER: root
   PASSWORD: P@ssw0rd
   DB: singlepage_storage
-  HOST: mysql-server
+  HOST: mysql
   PORT: 3306
