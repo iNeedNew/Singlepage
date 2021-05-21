@@ -4,7 +4,7 @@
 
 #### Клонировать приложение из репозитория
 
-```git colone https://github.com/iNeedNew/Singlepage.git```
+```git clone https://github.com/iNeedNew/Singlepage.git```
 
 ```cd Singlepage\```
 
