@@ -6,7 +6,7 @@
 
 ```git clone https://github.com/iNeedNew/Singlepage.git```
 
-```cd Singlepage\```
+```cd Singlepage/```
 
 #### Забилдить приложение
 
