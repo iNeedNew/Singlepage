@@ -162,6 +162,7 @@ Thumbs.db
 
 # User-specific stuff
 .idea
+.idea
 .idea/
 .idea/*
 .idea/**/workspace.xml
@@ -377,3 +378,5 @@ GitHub.sublime-settings
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,visualstudiocode,sublimetext,flask
+
+data-volume

@@ -24,7 +24,12 @@ address = "mysql+pymysql://{}:{}@{}:{}/{}".format(
 app.config['SQLALCHEMY_DATABASE_URI'] = address
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+try:
+    db = SQLAlchemy(app)
+    migrate = Migrate(app, db)
+except Exception as e:
+    print(e)
+
+
 
 from app import routes, models
